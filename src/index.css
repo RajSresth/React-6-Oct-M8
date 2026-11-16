@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .container,
+.skeleton_container{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  padding: 100px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 100px;
+}
+
+.skeleton_card{
+    width: 300px;
+    height:350px;
+    border-radius: 25px;
+   background-color: rgb(232, 230, 230);
+}
+#parent{
+  padding: 25px;
+}
+
+#parent>div{
+  border: 2px solid black;  
+  border-radius: 25px;
+  padding: 25px;
+  width: 300px;
+  margin-top: 20px;
+}
+
+#parent #counter button{
+  width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #222;
+  color: white;
+  margin-top: 10px;
+}
+
+#parent #search input{
+  margin-bottom: 15px;
+  width: 100%;  
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: 1px solid black;
+} */
+
+#parent {
+  width: 800px;
+  height: 500px;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 50px;
+  font-size: 24px;
+}
+
+#parent #child {
+  width: 100%;
+  padding: inherit;
+  height: 300px;
+  border-radius: inherit;
+  border: inherit;
+  margin-top: 20px;
+}
+
+#parent #child #sub {
+  width: 100%;
+  height: 140px;
+  border: inherit;
+  border-radius: inherit;
+  padding: inherit;
+  margin-top: inherit;
+}
