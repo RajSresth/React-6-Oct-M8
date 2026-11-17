@@ -1,0 +1,17 @@
+import React from "react";
+import Header from "./components/Header";
+import { Outlet } from "react-router-dom";
+
+const RootLayout = () => {
+  return (
+    <div>
+      <Header />
+
+      <main className="h-[calc(100vh-90px)]">
+        <Outlet />
+      </main>
+    </div>
+  );
+};
+
+export default RootLayout;

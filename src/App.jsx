@@ -7,19 +7,59 @@
 // import Home from "./Topic-10 API Integration/Home";
 // import Parent from "./Topic-11 useMemo useCallback React.memo/Parent";
 // import Parent from "./Topic-12 Context API/Parent";
+// import { ThemeProvider } from "./Topic-13 ContextAPI Revision/context/ThemeContext";
+// import Parent from "./Topic-13 ContextAPI Revision/Parent";
 
+// const App = () => {
+//   return (
+//     <div>
+//      <ThemeProvider>
+//         <Parent />
+//      </ThemeProvider>
+//     </div>
+//   );
+// };
 
-import { ThemeProvider } from "./Topic-13 ContextAPI Revision/context/ThemeContext";
-import Parent from "./Topic-13 ContextAPI Revision/Parent";
+// export default App;
+
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RootLayout from "./Topic-14 React Router DOM/RootLayout";
+
+// Pages
+import Allpage from "./Topic-14 React Router DOM/pages/Allpage";
+import Homes from "./Topic-14 React Router DOM/pages/Homes";
+import Experiences from "./Topic-14 React Router DOM/pages/Experiences";
+import Services from "./Topic-14 React Router DOM/pages/Services";
+// step-1 routing configuration
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      {
+        index: true,
+        element: <Allpage />,
+      },
+      {
+        path: "/homes",
+        element: <Homes />,
+      },
+      {
+        path: "/experiences",
+        element: <Experiences />,
+      },
+      {
+        path: "/services",
+        element: <Services />,
+      },
+    ],
+  },
+]);
 
 const App = () => {
-  return (
-    <div>
-     <ThemeProvider>
-        <Parent />
-     </ThemeProvider>
-    </div>
-  );
+  return <RouterProvider router={appRouter} />;
 };
 
 export default App;
