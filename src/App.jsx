@@ -20,6 +20,8 @@
 //   );
 // };
 
+/**
+ * ! React Router Dom - 17-11-2026
 // export default App;
 
 import React from "react";
@@ -53,6 +55,82 @@ const appRouter = createBrowserRouter([
       {
         path: "/services",
         element: <Services />,
+      },
+    ],
+  },
+]);
+
+const App = () => {
+  return <RouterProvider router={appRouter} />;
+};
+
+export default App;
+ */
+
+/**
+ * ! Basics of Routing
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// Pages
+import Home from "./Topic-15 Routing Rivision/Home";
+import About from "./Topic-15 Routing Rivision/About";
+import Contact from "./Topic-15 Routing Rivision/Contact";
+import NotFoundPage from "./Topic-15 Routing Rivision/NotFoundPage";
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
+  {
+    path: "*",
+    element: <NotFoundPage/>
+  }
+]);
+
+const App = () => {
+  return <RouterProvider router={appRouter} />;
+};
+
+export default App;
+*/
+
+/**
+ * ! Children routes
+ */
+
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RootLayout from "./Topic-15 Routing Rivision/RootLayout";
+import About from "./Topic-15 Routing Rivision/pages/About";
+import Contact from "./Topic-15 Routing Rivision/pages/Contact";
+import Home from "./Topic-15 Routing Rivision/pages/Home";
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },
