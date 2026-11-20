@@ -106,7 +106,7 @@ export default App;
 
 /**
  * ! Children routes
- */
+ 
 
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -141,3 +141,20 @@ const App = () => {
 };
 
 export default App;
+*/
+
+import React from 'react'
+import AppRouting from './Topic-16 Redux Toolkit (RTK)/routes/AppRouting'
+import {Provider} from "react-redux";
+import store from './Topic-16 Redux Toolkit (RTK)/Redux/store';
+
+const App = () => {
+  return (
+
+    <Provider store={store}>
+      <AppRouting/>
+    </Provider>
+  )
+}
+
+export default App
